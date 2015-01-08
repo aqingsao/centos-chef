@@ -1,0 +1,4 @@
+编辑 /etc/init.d/httpd 文件，在首行 #!/bin/sh 下面加入两行
+	# chkconfig: 35 85 15
+	# description: Activates/Deactivates Apache 2.4.6
+

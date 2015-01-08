@@ -1,0 +1,18 @@
+安装完毕后， 所有的东西都在 /usr/local/apache2 这个目录下，最重要的当属 conf/httpd.conf 
+	必须：
+	LoadModule authz_host_module modules/mod_authz_host.so
+	LoadModule authz_core_module modules/mod_authz_core.so
+	LoadModule userdir_module modules/mod_userdir.so
+	LoadModule dir_module modules/mod_dir.so
+	LoadModule mime_module modules/mod_mime.so
+	设置超时：
+	LoadModule reqtimeout_module modules/mod_reqtimeout.so
+	PHP:
+	LoadModule php5_module modules/libphp5.so
+	<FilesMatch \.php$>
+		SetHandler application/x-httpd-php
+	</FilesMatch>
+	
+	URL Rewrite:
+	LoadModule rewrite_module modules/mod_rewrite.so
+
