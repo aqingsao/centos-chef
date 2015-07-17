@@ -6,8 +6,19 @@ Port <port>
 
 # Don't forget to then make any necessary changes to port forwarding in your router and any applicable firewall rules.
 iptables -I INPUT -p tcp --dport <port> -j ACCEPT
+
+## if centos < 7
 service iptables save
 service iptables restart
+## if centor >= 7
+service iptables save
+systemctl restart iptables
+###
+### systemctl stop firewalld
+### systemctl mask firewalld
+### yum install iptables-services
+### systemctl enable iptables
+###
 
 # restart the sshd service. 
 service sshd restart
