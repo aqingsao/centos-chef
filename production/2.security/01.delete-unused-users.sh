@@ -1,7 +1,26 @@
 # http://www.hackbase.com/tech/2009-11-08/57765.html，删除无用用户
 
-删除用户：userdel
-删除组：groupdel
+# 删除用户：userdel
 
-可删除用户：lp, sync, shutdown, halt, news, uucp, operator, games, gopher, ftp, apache
-可删除组：lp, news, uucp, dip  (以上某些用户没有对应的组)
+sudo userdel adm
+sudo userdel lp
+sudo userdel sync
+sudo userdel shutdown
+sudo userdel halt
+sudo userdel news
+sudo userdel uucp
+sudo userdel operator
+sudo userdel games
+sudo userdel gopher
+sudo userdel ftp 
+sudo userdel apache 
+
+# 删除组：groupdel
+
+sudo groupdel adm
+sudo groupdel lp
+sudo groupdel news
+sudo groupdel uucp
+sudo groupdel games
+sudo groupdel dip
+sudo groupdel pppusers

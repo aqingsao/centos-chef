@@ -1,7 +1,12 @@
-# SSH logins can be limited to only certain users who need remote access. If you have many user accounts on the system then it makes sense to limit remote access to only those that really need it thus limiting the impact of a casual user having a weak password. 
-# Add an AllowUsers line followed by a space separated list of usernames to /etc/ssh/sshd_config For example:
+# http://wiki.centos.org/HowTos/Network/SecuringSSH
+# SSH logins can be limited to only certain users who need remote access
 
- # limit remote access to only those that really need it
-AllowUsers <user>
+vi /etc/ssh/sshd_config
+
+AllowUsers <user> # add this line to permit <user> from remote login
+
+PermitRootLogin no # change YES to no to disable ROOT from remote login
+
+Protocol 2 # Disable old protocol 1 which is less secure
 
 service sshd restart

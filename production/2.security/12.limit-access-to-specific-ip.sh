@@ -1,2 +1,0 @@
-# If you only need remote access from one IP address (say from work to your home server), then consider filtering connections at your firewall by either adding a firewall rule on your router or in iptables to limit access on port 22 to only that specific IP address. For example, in iptables this could be achieved with the following type of rule:
-iptables -A INPUT -p tcp -s <my_ip_address> --dport <port> -j ACCEPT
