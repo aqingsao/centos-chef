@@ -9,4 +9,6 @@ PermitRootLogin no # change YES to no to disable ROOT from remote login
 
 Protocol 2 # Disable old protocol 1 which is less secure
 
+Port <port>
+
 service sshd restart

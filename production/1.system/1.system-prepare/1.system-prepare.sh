@@ -34,10 +34,10 @@ sudo yum update
 # update openssh for security
 sudo yum update openssh
 
-# 4. update anti-virus
-sudo yum update clamav
 # install from EPEL
 sudo yum --enablerepo=epel -y install clamav clamav-update
+# 4. update anti-virus
+sudo yum update clamav
 # update pattern files
 sudo freshclam
 
