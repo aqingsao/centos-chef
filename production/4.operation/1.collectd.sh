@@ -18,5 +18,6 @@ root@watcher ~ $ systemctl enable collectd
 root@watcher ~ $ curl -G 'http://localhost:8086/query' --data-urlencode "q=CREATE DATABASE collectd"
 root@watcher ~ $ curl -G 'http://localhost:8086/query?pretty=true' --data-urlencode "q=SHOW DATABASES"
 
-# 5. 
+# 5. install 
 sudo yum install collectd-nginx
+sudo yum install collectd-mysql
